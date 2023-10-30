@@ -94,3 +94,10 @@
       color: red;
       font-weight: bold;
   }
+
+@media screen and (max-width: 768px) {
+    #login-form {
+        flex-wrap: wrap;
+    }
+    
+}
