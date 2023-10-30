@@ -111,7 +111,7 @@ button:hover {
     text-decoration: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .container .cadastro-form {
         flex-wrap: wrap;
     }
