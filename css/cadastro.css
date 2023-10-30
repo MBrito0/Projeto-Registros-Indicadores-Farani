@@ -101,6 +101,8 @@ button:hover {
     border-radius: 9px;
     padding: 5px 8px ;
     background-color: rgba(182, 76, 235, 0.89);
+    font-size: 16px;
+
 }
 
 .container a:hover{
