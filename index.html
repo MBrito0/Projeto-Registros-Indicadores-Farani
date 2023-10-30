@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <h2>Para acessar o sistema faça seu cadastro!</h2>
+            <!--<h4>Já tem uma conta?
+                <a href="page/login.html">Acesse aqui!</a> 
+            </h4> -->
+        </header>
+
+        <form id="cadastro-form" action="https://api.sheetmonkey.io/form/gNeK9GAzNr4BasAtAUBVZn" method="post">
+
+            <label for="nomeCompleto">Nome Completo:</label>
+            <input type="text" id="nomeCompleto" name="nomeCompleto" /*required*/>
+            
+            <label for="nomeEmpresa">Nome da Empresa:</label>
+            <input type="text" id="nomeEmpresa" name="nomeEmpresa" /*required*/>
+            
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" minlength="11" maxlength="11" /*required*/>
+            
+            <label for="celular">Celular (com DDD):</label>
+            <input type="text" id="celular" name="celular" minlength="11" maxlength="11" /*required*/>
+
+        <div class="selector-setor">
+            <h5>Setor na Empresa:</h5>
+            <select id="setor" type="select" name="setor" /*required*/>
+                <option value="" disabled selected>Escolha um setor</option>
+                <option value="Varejo">Varejo</option>
+                <option value="TI">Tecnologia da Informação (TI)</option>
+                <option value="Industria">Indústria</option>
+                <option value="Financeiro">Financeiro</option>
+                <option value="Servicos">Serviços</option>
+                <option value="Logistica">Logística</option>
+                <option value="Agropecuaria">Agropecuária</option>
+                <option value="Construcao">Construção</option>
+            </select>
+
+            <h5>Função na Empresa:</h5>
+            <select id="select-funcao" type="select"  name="setor" /*required*/>
+                <option value="" disabled selected>Escolha um setor</option>
+                <option value="Fouder">Fouder</option>
+                <option value="Presidente">Presidente</option>
+                <option value="C-Level">C-Level</option>
+                <option value="Diretor">Diretor</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Coordenador">Coordenador</option>
+            </select>
+        </div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" maxlength="30" placeholder="exemplo@mail.com" /*required*/>
+        
+        <div class="coluna">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" minlength="8" maxlength="15" placeholder="Crie sua senha" /*required*/>
+        
+            <label for="confirmacaoSenha">Confirmação de Senha:</label>
+            <input type="password" id="confirmacaoSenha" name="confirmacaoSenha" minlength="8" placeholder="Confirme sua senha" /*required*/>
+        </div>
+            <button type="submit" id="button-cadastro">Cadastrar</button>
+        <a href="page/login.html">Já possui Login? Acesse</a>
+        </form>
+    </section>
+    <script src="javascrpt/cadastro.js"></script>
+</body>
+</html>
