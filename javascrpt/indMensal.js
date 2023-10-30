@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("multi-step-form");
     const steps = document.querySelectorAll(".step");
+    const consultarIndicesForm = document.getElementById("consultar-indices-form");
     let currentStep = 0;
 
     // Função para exibir a etapa atual
@@ -64,62 +65,28 @@ document.addEventListener("DOMContentLoaded", function() {
         if (validateStep(currentStep)) {
             // Aqui você pode enviar os dados do formulário para o servidor
             alert("Registro enviado com sucesso!");
+
+            // Redirecionar de volta para a página de login
+            window.location.href = ""; // Substitua com o URL correto
         }
+    });
+
+    // Manipulador de evento para consulta de índices
+    consultarIndicesForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        // Coletar o mês e ano para consulta
+        const consultaMesAno = document.getElementById("input_consulta").value;
+        if (!consultaMesAno) {
+            alert("Por favor, escolha um mês e ano para a consulta.");
+            return;
+        }
+
+        // Aqui você deve implementar a lógica de consulta de índices no servidor e exibir os resultados ao usuário
+        // Em vez de alert, você pode atualizar a página para exibir os resultados ou exibi-los em um modal, por exemplo.
+        alert("Consulta de índices realizada com sucesso para " + consultaMesAno);
     });
 
     // Iniciar com a primeira etapa
     showStep(currentStep);
-});
-
-  // Manipular o envio do formulário de consulta
-  document.getElementById('consultar-indices-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede o envio do formulário
-
-    // Coletar o mês e ano para consulta
-    const consultaMesAno = document.getElementById('consultaMesAno').value;
-
-    // Realizar a consulta e exibir os resultados
-    const resultadoConsulta = consultarIndices(consultaMesAno);
-
-    if (resultadoConsulta) {
-        alert('Resultados da consulta: ' + JSON.stringify(resultadoConsulta));
-    } else {
-        alert('Nenhum resultado encontrado para o mês e ano informados.');
-    }
-});
-
-// Função para consultar índices mensais
-function consultarIndices(mesAno) {
-    const resultado = indicadoresMensais.find(indicador => indicador.mesAno === mesAno);
-    return resultado;
-};
-
-// URL para onde você deseja fazer a solicitação POST
-const url = 'https://api.sheetmonkey.io/form/gNeK9GAzNr4BasAtAUBVZn';
-
-// Dados que você deseja enviar no corpo da solicitação POST (como um objeto JavaScript)
-const data = indicadoresMensais ;
-
-// Opções para a solicitação, incluindo o método POST, cabeçalhos e corpo
-const options = {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json' // O tipo de conteúdo que você está enviando
-},
-body: JSON.stringify(data) // Converte o objeto JavaScript em uma string JSON
-};
-
-// Faça a solicitação POST usando a API Fetch
-fetch(url, options)
-.then(response => {
-if (!response.ok) {
-  throw new Error('Erro na solicitação POST');
-}
-return response.json();
-})
-.then(data => {
-console.log('Resposta da solicitação POST:', data);
-})
-.catch(error => {
-console.error('Erro:', error);
 });

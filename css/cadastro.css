@@ -12,43 +12,49 @@
 
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #d2cbcb;
+    text-align: center;
     background-image: url(https://besthqwallpapers.com/Uploads/17-11-2019/112053/violet-triangles-galaxy-geometric-shapes-lollipop-lines.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
     max-width: 100%;
 }
 
 h2 {
-    text-align:center;
-    font-size: 24px;
+    display: flex;
+    text-align: center;
+    font-size: 26px;
 }
 
 .container{
-    position: relative;
-    max-width: 95%;
+    font-size: 20px;
+    max-width: 100%;
+    margin: 0px auto;
     background-color: #efefef;
-    padding: 20px 40px;
-    border-radius: 8px;
     box-shadow: 0 0 15px rgb(178, 82, 167);
-    overflow: auto;
+    border-radius: 7px;
+    padding: 80px;
+    margin-top: 30px;
+
 }
 
-
-
 label {
-    display: block;
-    margin: 10px 0;
+    display: flex;
+    margin: 5px 8px;
     font-weight: bold;
+    font-size: 15px;
 }
 
 h5{
-    text-align: end;
+    display: block;
+    margin: 10px 0;
+    text-align: left;
     font-size: 12px;
 }
  .selector-setor {
@@ -93,7 +99,7 @@ button:hover {
     color: #fffffff6;
     border: 0.9px solid;
     border-radius: 9px;
-    padding: 5px 8px;
+    padding: 5px 8px ;
     background-color: rgba(182, 76, 235, 0.89);
 }
 

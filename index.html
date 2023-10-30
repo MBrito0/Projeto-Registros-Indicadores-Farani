@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,9 @@
 <body>
     <section class="container">
         <header>
-            <h2>Para acessar o sistema faça seu cadastro!</h2>
+            <h2>Para acessar o sistema faça seu cadastro!</h2> <br>
+
+            <a href="page/login.html">Já possui Login? Acesse</a><br>
             <!--<h4>Já tem uma conta?
                 <a href="page/login.html">Acesse aqui!</a> 
             </h4> -->
@@ -43,7 +45,7 @@
                 <option value="Construcao">Construção</option>
             </select>
 
-            <h5>Função na Empresa:</h5>
+            <h5>Função:</h5>
             <select id="select-funcao" type="select"  name="setor" /*required*/>
                 <option value="" disabled selected>Escolha um setor</option>
                 <option value="Fouder">Fouder</option>
@@ -66,7 +68,6 @@
             <input type="password" id="confirmacaoSenha" name="confirmacaoSenha" minlength="8" placeholder="Confirme sua senha" /*required*/>
         </div>
             <button type="submit" id="button-cadastro">Cadastrar</button>
-        <a href="page/login.html">Já possui Login? Acesse</a>
         </form>
     </section>
     <script src="javascrpt/cadastro.js"></script>
