@@ -94,3 +94,11 @@
            font-size: 16px;
            justify-content: space-between;
        }
+
+
+@media screen and (max-width: 768px) {
+    .container .container2 {
+        flex-wrap: wrap;
+    }
+    
+}
