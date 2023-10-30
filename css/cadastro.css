@@ -1,0 +1,113 @@
+/* google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,500;1,600;1,700;1,800&display=swap');
+
+
+   /*Gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://besthqwallpapers.com/Uploads/17-11-2019/112053/violet-triangles-galaxy-geometric-shapes-lollipop-lines.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    max-width: 100%;
+}
+
+h2 {
+    text-align:center;
+    font-size: 24px;
+}
+
+.container{
+    position: relative;
+    max-width: 95%;
+    background-color: #efefef;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(178, 82, 167);
+    overflow: auto;
+}
+
+
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+h5{
+    text-align: end;
+    font-size: 12px;
+}
+ .selector-setor {
+    display: flex;
+    column-gap: 5px;
+    justify-content: space-evenly;
+    padding: 20px 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #cc97d2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: radial-gradient(circle, rgba(199,125,255,1) 0%, rgba(90,24,154,1) 100%);
+}
+
+.container a{
+    text-decoration: none;
+    color: #fffffff6;
+    border: 0.9px solid;
+    border-radius: 9px;
+    padding: 5px 8px;
+    background-color: rgba(182, 76, 235, 0.89);
+}
+
+.container a:hover{
+    cursor: pointer;
+    background: radial-gradient(circle, rgba(199,125,255,1) 0%, rgba(90,24,154,1) 100%);
+}
+.container a:link{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .container .cadastro-form {
+        flex-wrap: wrap;
+    }
+    
+}

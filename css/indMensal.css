@@ -1,0 +1,96 @@
+       /* google fonts*/
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,500;1,600;1,700;1,800&display=swap');
+
+       /*Gerais*/
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+       }
+        body {
+           background-color: #f0f0f0;
+           background-image: url(https://besthqwallpapers.com/Uploads/17-11-2019/112053/violet-triangles-galaxy-geometric-shapes-lollipop-lines.jpg) ;
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-attachment: fixed;
+           text-align: center;
+       }
+       
+       
+       .container, .container2{
+           display: flex;
+           flex-direction: column;
+           column-gap: 5px;
+           justify-content: space-evenly;
+           padding: 24px 10px;
+           align-items: center;
+           max-width: 600px;
+           margin: 25px auto;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 1px 0 10px rgb(178, 82, 167);
+       }
+       
+       .container h2 {
+           font-size: 23px;
+           margin-bottom: 15px;
+           text-align: center ;
+       }
+       
+       .form-group {
+           
+           margin-bottom: 20px;
+       }
+       
+       label {
+           display: block;
+           font-weight: 550;
+           margin: 3px ;
+       }
+       
+       input[type="text"],
+       input[type="month"],
+       select {
+           width: 98%;
+           padding: 8px;
+           border: 1px solid #ccc;
+           border-radius: 3px;
+           font-size: 15px;
+       }
+       
+       .container2 input[type="month"] {
+           width: 60%;
+       }
+       
+       button {
+           padding: 12px 30px;
+           background-color: #cc97d2;
+           color: #fff;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       
+       button:hover {
+           background: radial-gradient(circle, rgba(199,125,255,1) 0%, rgba(90,24,154,1) 100%);
+       }
+       
+       .container2 button{
+           margin: 10px auto;
+       }
+       
+       .container2 h2 {
+           font-size: 22px;
+           margin-bottom: 15px;
+           text-align: center ;
+       }
+       
+       #input-consulta{
+           width: 50%;
+           padding: 1px;
+           border: 1px solid #ccc;
+           border-radius: 3px;
+           font-size: 16px;
+           justify-content: space-between;
+       }

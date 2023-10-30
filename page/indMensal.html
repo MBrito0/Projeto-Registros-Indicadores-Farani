@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/indMensal.css">
+    <title>Formulário de Múltiplos Passos</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Indicadores Mensais</h2>
+        <form id="multi-step-form" action="https://api.sheetmonkey.io/form/gNeK9GAzNr4BasAtAUBVZn" method="post">
+            <!-- Passo 1 -->
+            <div class="step" data-step="1">
+                <h3>Passo 1</h3>
+                <div class="form-group">
+                    <label for="mesAno">Mês e Ano:</label>
+                    <input type="month" id="mesAno" name="mesAno" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Nome da Empresa:</label>
+                    <input type="text" id="empresa" name="empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="setor">Setor:</label>
+                    <select id="setor" name="setor" required>
+                        <option value="" disabled selected>Escolha um setor</option>
+                        <option value="Varejo">Varejo</option>
+                        <option value="TI">Tecnologia da Informação (TI)</option>
+                        <option value="Industria">Indústria</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Servicos">Serviços</option>
+                        <option value="Logistica">Logística</option>
+                        <option value="Agropecuaria">Agropecuária</option>
+                        <option value="Construcao">Construção</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="faturamento">Faturamento (Mês/Ano):</label>
+                    <input type="text" id="faturamento" name="faturamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="gastos">Gastos (Mês/Ano):</label>
+                    <input type="text" id="gastos" name="gastos" required>
+                </div>
+
+                <button class="next-button">Próximo</button>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="step" data-step="2">
+                <h3>Passo 2</h3>
+                <div class="form-group">
+                    <label for="funcionariosTotal">Funcionários Total:</label>
+                    <input type="text" id="funcionariosTotal" name="funcionariosTotal" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionariosContratados">Funcionários Contratados:</label>
+                    <input type="text" id="funcionariosContratados" name="funcionariosContratados" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionariosDemitidos">Funcionários Demitidos:</label>
+                    <input type="text" id="funcionariosDemitidos" name="funcionariosDemitidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="numeroVendas">Número de Vendas:</label>
+                    <input type="text" id="numeroVendas" name="numeroVendas" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketMedio">Ticket Médio:</label>
+                    <input type="text" id="ticketMedio" name="ticketMedio" required>
+                </div>
+                <div class="form-group">
+                    <label for="taxaConversao">Taxa de Conversão:</label>
+                    <input type="text" id="taxaConversao" name="taxaConversao" required>
+                </div>
+
+                <button class="prev-button">Anterior</button>
+                <button type="submit" class="submit-button">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <section class="container2">
+        <form id="consultar-indices-form" action="https://api.sheetmonkey.io/form/gNeK9GAzNr4BasAtAUBVZn" method="post">
+            <h2>Consultar Índices Mensais</h2>
+            <label for="consultaMesAno">Mês e Ano:</label>
+            <input id="input_consulta" type="month" id="consultaMesAno" name="consultaMesAno" required>
+    
+            <button id="consultar-indices-form" type="submit">Consultar</button>
+        </form>
+        </section>
+
+    <script src="../javascrpt/indMensal.js"></script>
+</body>
+</html>

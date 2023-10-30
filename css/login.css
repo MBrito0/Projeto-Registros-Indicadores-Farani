@@ -1,0 +1,96 @@
+/* google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,500;1,600;1,700;1,800&display=swap');
+
+   /*Gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo para a página de login  */
+    body {
+      
+      background-color: #f0f0f0;
+      text-align: center;
+      background-image: url(https://besthqwallpapers.com/Uploads/17-11-2019/112053/violet-triangles-galaxy-geometric-shapes-lollipop-lines.jpg) ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 40px;
+      max-width: 100%;
+  }
+
+  #login-form {
+      font-size: 20px;
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: #efefef;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 80px;
+      margin-top: 30px;
+  }
+
+  
+  #button-entrar a {
+    color: #fffffff6;
+    padding: 5px 8px;
+    font-size: 15px;
+    
+}
+
+#login-form a:link{
+    text-decoration: none;
+}
+
+  label {
+      display: block;
+      text-align: left;
+  }
+
+  input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  input:focus{
+    box-shadow: 0 8px 6px rgba(105, 103, 103, 0.13);
+
+}
+
+  button {
+      background-color: #cc97d2;
+      border: none;
+      padding: 10px 35px;
+      margin: 12px auto;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #efefef;
+      font-size: 15px;
+  }
+
+  button:hover{
+    background: radial-gradient(circle, rgba(199,125,255,1) 0%, rgba(90,24,154,1) 100%);
+  }
+
+  #button-cadastro{
+    color: #91269d;
+    padding: 5px 8px;
+    font-size: 19px;
+  }
+
+  .error {
+      color: red;
+      font-weight: bold;
+  }
