@@ -43,6 +43,11 @@
 
     return true; // CPF válido
 }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 
       // Função para validar o formato do e-mail
       function validarEmail(email) {

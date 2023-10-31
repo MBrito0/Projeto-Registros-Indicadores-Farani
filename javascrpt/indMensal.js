@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextButton = document.querySelector(".next-button");
     const prevButton = document.querySelector(".prev-button");
     const submitButton = document.querySelector(".submit-button");
+    const consultarButton = document.querySelector("#consultar-button");
+    const consultaModal = document.querySelector("#consulta-modal");
+    const modalContent = document.querySelector("#modal-content");
 
     nextButton.addEventListener("click", function(event) {
         event.preventDefault();
@@ -65,26 +68,27 @@ document.addEventListener("DOMContentLoaded", function() {
         if (validateStep(currentStep)) {
             // Aqui você pode enviar os dados do formulário para o servidor
             alert("Registro enviado com sucesso!");
-
-            // Redirecionar de volta para a página de login
-            window.location.href = ""; // Substitua com o URL correto
+            // Redirecionar para a página de login
+            window.location.href = "pagina_de_login.html";
         }
     });
 
-    // Manipulador de evento para consulta de índices
-    consultarIndicesForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        
-        // Coletar o mês e ano para consulta
+    // Manipular o envio do formulário de consulta
+    consultarButton.addEventListener("click", function() {
         const consultaMesAno = document.getElementById("input_consulta").value;
-        if (!consultaMesAno) {
-            alert("Por favor, escolha um mês e ano para a consulta.");
-            return;
+        if (consultaMesAno) {
+            // Realize a consulta dos índices e exiba os resultados em um modal
+            const resultadoConsulta = "Resultados da consulta:\nMês e Ano: " + consultaMesAno;
+            modalContent.textContent = resultadoConsulta;
+            consultaModal.style.display = "block";
+        } else {
+            alert("Por favor, preencha o campo de consulta.");
         }
+    });
 
-        // Aqui você deve implementar a lógica de consulta de índices no servidor e exibir os resultados ao usuário
-        // Em vez de alert, você pode atualizar a página para exibir os resultados ou exibi-los em um modal, por exemplo.
-        alert("Consulta de índices realizada com sucesso para " + consultaMesAno);
+    // Fechar o modal
+    modalContent.addEventListener("click", function() {
+        consultaModal.style.display = "none";
     });
 
     // Iniciar com a primeira etapa
