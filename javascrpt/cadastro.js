@@ -20,11 +20,29 @@
 
       // Função para validar o formato do CPF
       function validarCPF(cpf) {
-        // Implemente a validação de CPF adequada aqui
-        // Você pode usar bibliotecas de validação de CPF de terceiros para isso
-        // ou implementar a validação manualmente
-        return true; // Temporariamente retornando true para fins de demonstração
-      }
+        cpf = cpf.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
+
+         if (cpf.length !== 11 || !/^\d{11}$/.test(cpf)) {
+          return false; // O CPF deve ter 11 dígitos numéricos
+        }
+
+       const cpfArray = cpf.split('').map(Number);
+       const soma1 = cpfArray.slice(0, 9).reduce((acc, value, i) => acc + value * (10 - i), 0);
+       const resto1 = (soma1 * 10) % 11;
+
+         if (resto1 === 10 || resto1 !== cpfArray[9]) {
+         return false; // Primeiro dígito verificador inválido
+        }
+
+      const soma2 = cpfArray.slice(0, 10).reduce((acc, value, i) => acc + value * (11 - i), 0);
+      const resto2 = (soma2 * 10) % 11;
+
+         if (resto2 === 10 || resto2 !== cpfArray[10]) {
+        return false; // Segundo dígito verificador inválido
+       }
+
+    return true; // CPF válido
+}
 
       // Função para validar o formato do e-mail
       function validarEmail(email) {
